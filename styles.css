@@ -1,11 +1,15 @@
+/* import for this exercise if using react, standard link will add in index.html */
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* total page color */
 body {
   background-color: #24272E;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 header {
@@ -13,6 +17,15 @@ header {
   padding: 30px;
 }
 
+/* points to h1 in header tag in order to stlye it. */
 header > h1 {
   text-align: center;
+  color: #24272E;
+  font-weight: 700;
+}
+
+.score-board {
+  border: 3px solid white;
+  width: 200px;
+  margin: 30px auto;
 }
