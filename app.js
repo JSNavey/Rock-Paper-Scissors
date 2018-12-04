@@ -10,25 +10,34 @@ const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
 
-// userChoice passes rock/paper/sciossors from addEventListening as argument
+// Function that computer will generate choices randomly between 0-2 or rock/paper/scissors.
+function getComputerChoice() {
+  const choices = ["rock", "paper", "scissors"];
+  const randomNumber = Math.floor(Math.random() * 3);
+  return choices[randomNumber];
+}
+
+console.log(getComputerChoice());
+
+// userChoice passes rock/paper/sciossors from addEventListening as argument.
 function game(userChoice) {
   console.log("I choose " + userChoice);
 }
 
-// Add click addEventListener to each rock paper sciossors DOM Element
-// Then wraping them in main function
+// Add click addEventListener to each rock paper sciossors DOM Element.
+// Then wraping them in main function.
 function main() {
-  rock_div.addEventListener('click', function() {
+  rock_div.addEventListener("click", function() {
     // console.log("Rock");
     game("rock!")
   });
   
-  paper_div.addEventListener('click', function() {
+  paper_div.addEventListener("click", function() {
     // console.log("Paper");
     game("paper!")
   });
   
-  scissors_div.addEventListener('click', function() {
+  scissors_div.addEventListener("click", function() {
     // console.log("Scissors");
     game("scissors!")
   });
