@@ -9,3 +9,16 @@ const result_div = document.querySelector(".result");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
+
+// Add action to each rock paper sciossors DOM Element
+rock_div.addEventListener('click', function() {
+  console.log("Rock");
+});
+
+paper_div.addEventListener('click', function() {
+  console.log("Paper");
+});
+
+scissors_div.addEventListener('click', function() {
+  console.log("Scissors");
+});
