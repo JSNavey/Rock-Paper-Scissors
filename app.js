@@ -17,11 +17,12 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
-console.log(getComputerChoice());
-
 // userChoice passes rock/paper/sciossors from addEventListening as argument.
+// Take computer choice from function above.
 function game(userChoice) {
+  const computerChoice = getComputerChoice();
   console.log("I choose " + userChoice);
+  console.log("Computer chooses " + computerChoice);
 }
 
 // Add click addEventListener to each rock paper sciossors DOM Element.
