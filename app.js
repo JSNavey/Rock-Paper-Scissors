@@ -21,8 +21,26 @@ function getComputerChoice() {
 // Take computer choice from function above.
 function game(userChoice) {
   const computerChoice = getComputerChoice();
-  console.log("I choose " + userChoice);
-  console.log("Computer chooses " + computerChoice);
+  // console.log("I choose " + userChoice);
+  // console.log("Computer chooses " + computerChoice);
+  console.log(userChoice + computerChoice);
+  switch (userChoice + computerChoice) {
+    case "rockscissors":
+    case "paperrock":
+    case "scissorspaper":
+      console.log("You win!");
+      break;
+    case "rockpaper":
+    case "paperscissors":
+    case "scissorsrock":
+      console.log("Loser!");
+      break;
+    case "rockrock":
+    case "paperpaper":
+    case "scissorsscissors":
+      console.log("Well...it's a draw.");
+      break;
+  }
 }
 
 // Add click addEventListener to each rock paper sciossors DOM Element.
@@ -30,17 +48,17 @@ function game(userChoice) {
 function main() {
   rock_div.addEventListener("click", function() {
     // console.log("Rock");
-    game("rock!")
+    game("rock")
   });
   
   paper_div.addEventListener("click", function() {
     // console.log("Paper");
-    game("paper!")
+    game("paper")
   });
   
   scissors_div.addEventListener("click", function() {
     // console.log("Scissors");
-    game("scissors!")
+    game("scissors")
   });
 }
 
