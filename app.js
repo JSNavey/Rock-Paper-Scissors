@@ -28,17 +28,20 @@ function game(userChoice) {
     case "rockscissors":
     case "paperrock":
     case "scissorspaper":
-      console.log("You win!");
+      // console.log("You win!");
+      win();
       break;
     case "rockpaper":
     case "paperscissors":
-    case "scissorsrock":
-      console.log("Loser!");
+    case "scissorsrock": 
+      // console.log("Loser!");
+      lose();
       break;
     case "rockrock":
     case "paperpaper":
     case "scissorsscissors":
-      console.log("Well...it's a draw.");
+      // console.log("Well...it's a draw.");
+      draw();
       break;
   }
 }
