@@ -17,6 +17,18 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
+function win() {
+  console.log("You win!")
+}
+
+function lose() {
+  console.log("Loser.")
+}
+
+function draw() {
+  console.log("Well ... it's draw.")
+}
+
 // userChoice passes rock/paper/sciossors from addEventListening as argument.
 // Take computer choice from function above.
 function game(userChoice) {
