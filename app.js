@@ -17,13 +17,18 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
+// To capitalize the first letter
+// Must apply slice(1), otherwise it shows only the first letter
+function capitalizeFirstLetter (choice) {
+  return choice.charAt(0).toUpperCase() + choice.slice(1);
+}
 
 function win(userPick, computerPick) {
   userScore++;
   // Then change scores on the score board
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = userPick + " beats " + computerPick + ". You Win!";
+  result_p.innerHTML = capitalizeFirstLetter(userPick) + " beats " + capitalizeFirstLetter(computerPick) + ". You Win!";
 }
 
 function lose() {
