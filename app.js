@@ -31,6 +31,8 @@ function win(userPick, computerPick) {
   result_p.innerHTML = `${capitalizeFirstLetter(userPick)} beats ${capitalizeFirstLetter(computerPick)}. You Win!`;
   // Add class to JS by using DOM method
   document.getElementById(userPick).classList.add('winning-glow');
+  // Set time for the glow to be disappeared
+  setTimeout(function() { document.getElementById(userPick).classList.remove('winning-glow') }, 500);
 }
 
 function lose(userPick, computerPick) {
@@ -40,6 +42,7 @@ function lose(userPick, computerPick) {
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = `${capitalizeFirstLetter(userPick)} loses to ${capitalizeFirstLetter(computerPick)}. Sorry...`;
   document.getElementById(userPick).classList.add('losing-glow');
+  setTimeout(function() { document.getElementById(userPick).classList.remove('losing-glow') }, 500);
 }
 
 function draw(userPick, computerPick) {
@@ -47,6 +50,7 @@ function draw(userPick, computerPick) {
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = `${capitalizeFirstLetter(userPick)} to ${capitalizeFirstLetter(computerPick)}. Well...Try again then.`;
   document.getElementById(userPick).classList.add('draw-glow');
+  setTimeout(function() { document.getElementById(userPick).classList.remove('draw-glow') }, 500);
 }
 
 // userChoice passes rock/paper/sciossors from addEventListening as argument.
