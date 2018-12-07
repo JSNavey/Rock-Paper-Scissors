@@ -29,6 +29,8 @@ function win(userPick, computerPick) {
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = `${capitalizeFirstLetter(userPick)} beats ${capitalizeFirstLetter(computerPick)}. You Win!`;
+  // Add class to JS by using DOM method
+  document.getElementById(userPick).classList.add('winning-glow');
 }
 
 function lose(userPick, computerPick) {

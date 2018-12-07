@@ -91,3 +91,8 @@ header > h1 {
   font-size: 25px;
 }
 
+.winning-glow {
+  border: 5px solid #D4AF37;
+  box-shadow: 0 0 10px #f6e5c3;
+}
+
