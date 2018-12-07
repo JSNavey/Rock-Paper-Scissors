@@ -27,7 +27,7 @@ header > h1 {
 .score-board {
   border: 3px solid white;
   border-radius: 4px;
-  width: 200px;
+  width: 260px;
   margin: 30px auto;
   padding: 15px 20px;
   color: white;
@@ -38,21 +38,22 @@ header > h1 {
 
 .badge {
   background: #E2584D;
-  font-size: 14px;
-  padding: 2px 10px;
+  width: 120px;
+  font-size: 18px;
+  padding: 2px 15px;
 }
 
 /* user-label and computer-label are children of score board so the score board needs to set position as relative, otherwise the labels will be positioned refered to the browser. */
 #user-label {  
   position: absolute; 
   top: 33px;
-  left: -25px;
+  left: -65px;
 }
 
 #computer-label {  
   position: absolute; 
   top: 33px;
-  right: -44px;
+  right: -65px;
 }
 
 .result {

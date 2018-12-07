@@ -85,20 +85,11 @@ function game(userChoice) {
 // Add click addEventListener to each rock paper sciossors DOM Element.
 // Then wraping them in main function.
 function main() {
-  rock_div.addEventListener("click", function() {
-    // console.log("Rock");
-    game("rock")
-  });
+  rock_div.addEventListener("click", () => game("rock"));
   
-  paper_div.addEventListener("click", function() {
-    // console.log("Paper");
-    game("paper")
-  });
+  paper_div.addEventListener("click", () => game("paper"));
   
-  scissors_div.addEventListener("click", function() {
-    // console.log("Scissors");
-    game("scissors")
-  });
+  scissors_div.addEventListener("click", () => game("scissors"));
 }
 
 main();
