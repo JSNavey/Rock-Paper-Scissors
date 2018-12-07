@@ -39,12 +39,14 @@ function lose(userPick, computerPick) {
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = `${capitalizeFirstLetter(userPick)} loses to ${capitalizeFirstLetter(computerPick)}. Sorry...`;
+  document.getElementById(userPick).classList.add('losing-glow');
 }
 
 function draw(userPick, computerPick) {
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = `${capitalizeFirstLetter(userPick)} to ${capitalizeFirstLetter(computerPick)}. Well...Try again then.`;
+  document.getElementById(userPick).classList.add('draw-glow');
 }
 
 // userChoice passes rock/paper/sciossors from addEventListening as argument.
