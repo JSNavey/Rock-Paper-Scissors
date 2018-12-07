@@ -31,12 +31,18 @@ function win(userPick, computerPick) {
   result_p.innerHTML = `${capitalizeFirstLetter(userPick)} beats ${capitalizeFirstLetter(computerPick)}. You Win!`;
 }
 
-function lose() {
-  console.log("Loser.")
+function lose(userPick, computerPick) {
+  computerScore++;
+  // Then change scores on the score board
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_p.innerHTML = `${capitalizeFirstLetter(userPick)} loses to ${capitalizeFirstLetter(computerPick)}. Sorry...`;
 }
 
-function draw() {
-  console.log("Well ... it's draw.")
+function draw(userPick, computerPick) {
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_p.innerHTML = `${capitalizeFirstLetter(userPick)} to ${capitalizeFirstLetter(computerPick)}. Well...Try again then.`;
 }
 
 // userChoice passes rock/paper/sciossors from addEventListening as argument.
@@ -57,13 +63,13 @@ function game(userChoice) {
     case "paperscissors":
     case "scissorsrock": 
       // console.log("Loser!");
-      lose();
+      lose(userChoice, computerChoice);
       break;
     case "rockrock":
     case "paperpaper":
     case "scissorsscissors":
       // console.log("Well...it's a draw.");
-      draw();
+      draw(userChoice, computerChoice);
       break;
   }
 }
