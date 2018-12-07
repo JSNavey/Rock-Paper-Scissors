@@ -28,7 +28,7 @@ function win(userPick, computerPick) {
   // Then change scores on the score board
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = capitalizeFirstLetter(userPick) + " beats " + capitalizeFirstLetter(computerPick) + ". You Win!";
+  result_p.innerHTML = `${capitalizeFirstLetter(userPick)} beats ${capitalizeFirstLetter(computerPick)}. You Win!`;
 }
 
 function lose() {
