@@ -43,7 +43,8 @@ header > h1 {
   padding: 2px 15px;
 }
 
-/* user-label and computer-label are children of score board so the score board needs to set position as relative, otherwise the labels will be positioned refered to the browser. */
+/* user-label and computer-label are children of score board so the score board needs to set position as relative, 
+otherwise the labels will be positioned refered to the browser. */
 #user-label {  
   position: absolute; 
   top: 33px;
